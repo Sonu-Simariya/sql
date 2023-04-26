@@ -9,3 +9,8 @@ update user_details set subject_id=1 where gender='male';
 update user_details set subject_id=2 where gender='female';
 select user_id,user_details.gender,dept_name from user_details,depart 
 where user_details.subject_id=depart.dept_id;
+
+select * from dataset;
+select count(precinct) as value,precinct from  dataset group by precinct;
+alter table dataset add column(id int auto_increment,primary key(id));
+alter table dataset drop column id;
